@@ -1,0 +1,1061 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    font-family:Montserrat,sans-serif;
+}
+
+.container-custom{
+    width:100%;
+    max-width:1200px;
+    margin:auto;
+    padding:0 20px;
+}
+
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    background-image: url('/images/header.png') !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.header .container-custom{
+    height:100px;
+}
+
+.header .container-custom{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height:80px;
+}
+
+.header-logo img{
+    height:60px;
+}
+
+.header-menu{
+    display:flex;
+    gap:40px;
+}
+
+.header-menu a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+}
+
+.header-language{
+    display:flex;
+    gap:10px;
+}
+
+.header-language a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    padding:6px 12px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.header-language a:hover{
+    background:#5d0505;
+}
+
+/* SECTION 1 */
+
+.invitation-section{
+    width:100%;
+    padding:0;
+    margin:0;
+}
+
+.invitation-image{
+    width:100%;
+    display:block;
+}
+
+/* ===================================
+SECTION 2
+=================================== */
+
+.wish-section{
+    position:relative;
+    width:100%;
+}
+
+.wish-container{
+    position:relative;
+    width:100%;
+}
+
+.wish-bg{
+    width:100%;
+    display:block;
+}
+
+/* Overlay */
+
+.wish-overlay{
+
+    position:absolute;
+
+    top: 28%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width:85%;
+}
+
+/* Form */
+
+.wish-form{
+
+    width:100%;
+
+    max-width:1200px;
+}
+
+/* Row */
+
+.wish-row{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:60px;
+}
+
+/* ===================================
+AVATAR
+=================================== */
+
+.avatar-upload{
+
+    width:220px;
+
+    flex-shrink:0;
+}
+
+#avatar-preview{
+
+    width:220px;
+    height:220px;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    background:#f5f0e5;
+
+    border:4px solid #d9b26a;
+
+    cursor:pointer;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px;
+}
+
+#avatar-preview img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:50%;
+}
+
+#avatar-text{
+
+    color:#8b0000;
+
+    font-size:20px;
+
+    font-weight:600;
+
+    line-height:1.5;
+}
+
+/* ===================================
+RIGHT SIDE
+=================================== */
+
+.wish-fields{
+
+    flex:1;
+}
+
+/* Label */
+
+.form-label{
+
+    display:block;
+
+    color:#8b0000;
+
+    font-size:30px;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+}
+
+/* Input */
+
+.wish-input{
+
+    width:100%;
+
+    height:80px;
+
+    background:#f5f0e5;
+
+    border:3px solid #ddb35f;
+
+    border-radius:30px;
+
+    padding:0 30px;
+
+    font-size:24px;
+
+    outline:none;
+
+    margin-bottom:35px;
+}
+
+/* Textarea */
+
+.wish-textarea{
+
+    width:100%;
+
+    height:250px;
+
+    background:#f5f0e5;
+
+    border:3px solid #ddb35f;
+
+    border-radius:30px;
+
+    padding:25px;
+
+    font-size:22px;
+
+    resize:none;
+
+    outline:none;
+}
+
+/* ===================================
+BUTTON
+=================================== */
+.wish-button{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    width:280px;
+
+    height:70px;
+
+    margin:35px auto 0;
+
+    border:3px solid #d9b26a;
+
+    border-radius:20px;
+
+    background:linear-gradient(
+        to bottom,
+        #d40000,
+        #9b0000
+    );
+
+    color:#ffe7a8;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    box-shadow:
+        inset 0 2px 0 rgba(255,255,255,.3),
+        0 4px 12px rgba(0,0,0,.15);
+
+    transition:.3s;
+}
+
+.wish-button:hover{
+
+    transform:translateY(-2px);
+}
+
+.wish-button::before{
+
+    content:"✈";
+
+    font-size:20px;
+}
+
+.wish-button:active{
+
+    transform:translateY(0);
+}
+
+/* =========================
+   CROP MODAL
+========================= */
+
+.crop-modal{
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.75);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:99999;
+}
+
+.crop-modal-content{
+    width:700px;
+    max-width:90vw;
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+
+    display:flex;
+    flex-direction:column;
+}
+
+.crop-image-wrapper{
+
+    height:450px;
+
+    padding:20px;
+
+    overflow:hidden;
+
+    flex:none;
+}
+
+.crop-footer{
+
+    height:80px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#fff;
+
+    border-top:1px solid #eee;
+}
+
+.crop-btn{
+
+    background:#8b0000;
+
+    color:#fff;
+
+    border:none;
+
+    padding:12px 40px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:18px;
+}
+
+#cropImage{
+
+    display:block;
+
+    max-width:100%;
+    max-height:560px;
+}
+
+
+.crop-btn:hover{
+
+    opacity:.9;
+}
+
+/* ===================================
+MOBILE
+=================================== */
+
+@media(max-width:768px){
+
+    .wish-overlay{
+
+        padding:15% 6%;
+    }
+
+    .wish-row{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:30px;
+    }
+
+    .avatar-upload{
+
+        width:150px;
+    }
+
+    #avatar-preview{
+
+        width:150px;
+        height:150px;
+    }
+
+    .wish-fields{
+
+        width:100%;
+    }
+
+    .form-label{
+
+        font-size:22px;
+    }
+
+    .wish-input{
+
+        height:60px;
+
+        font-size:18px;
+    }
+
+    .wish-textarea{
+
+        height:180px;
+
+        font-size:18px;
+    }
+
+    .wish-button{
+
+        width:240px;
+    }
+}
+
+/* ===========================
+SECTION 3
+=========================== */
+
+.memory-section{
+
+    position:relative;
+
+    width:100%;
+}
+
+.memory-container{
+
+    position:relative;
+}
+
+.memory-bg{
+
+    width:100%;
+
+    display:block;
+}
+
+.memory-overlay{
+
+    position:absolute;
+
+    top:20%;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:90%;
+}
+
+/* Grid */
+
+.memory-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fill,minmax(260px,1fr));
+
+    gap:50px;
+}
+
+/* Card */
+
+.memory-card{
+    width:150px;
+    height:100px;
+
+    border:2px solid #d8b05d;
+    border-radius:18px;
+
+    background:#f8f5ef;
+
+    position:relative;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.memory-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 12px 25px rgba(0,0,0,.15);
+}
+
+/* Envelope flap */
+
+.memory-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:70px;
+
+    background:#f0dfbd;
+
+    clip-path:
+        polygon(
+            0 0,
+            100% 0,
+            50% 100%
+        );
+}
+
+.envelope-top{
+
+    position:relative;
+
+    z-index:2;
+
+    font-size:36px;
+
+    margin-bottom:15px;
+}
+
+.memory-avatar{
+
+    width:110px;
+    height:110px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:4px solid #d9b26a;
+
+    display:block;
+
+    margin:10px auto;
+
+    position:relative;
+
+    z-index:2;
+}
+
+.memory-name{
+
+    margin-top:15px;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#8b0000;
+
+    position:relative;
+
+    z-index:2;
+}
+
+/* ===========================
+POPUP
+=========================== */
+
+.wish-modal{
+
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.6);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:99999;
+}
+
+.wish-modal-content{
+
+    width:min(900px,90vw);
+
+    max-height:80vh;
+
+    overflow-y:auto;
+
+    background:#fff;
+
+    border-radius:24px;
+
+    padding:40px;
+
+    position:relative;
+
+    text-align:center;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
+}
+
+.close-modal{
+
+    position:absolute;
+
+    top:15px;
+    right:20px;
+
+    border:none;
+
+    background:none;
+
+    font-size:28px;
+
+    cursor:pointer;
+}
+
+.wish-modal.show{
+    display:flex;
+}
+
+.modal-initial{
+
+    width:100px;
+    height:100px;
+
+    border-radius:50%;
+
+    background:#8b0000;
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    font-size:42px;
+
+    font-weight:700;
+
+    border:3px solid #d9b26a;
+
+    margin:0 auto 20px;
+}
+
+.modal-avatar{
+
+    width:100px;
+    height:100px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:4px solid #d9b26a;
+
+    margin:0 auto 20px;
+
+    display:block;
+}
+
+#modalName{
+
+    color:#8b0000;
+
+    font-size:32px;
+
+    margin-bottom:25px;
+}
+
+#modalMessage{
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    color:#444;
+
+    text-align:left;
+
+    white-space:pre-wrap;
+
+    word-break:break-word;
+
+    max-width:700px;
+
+    margin:0 auto;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .memory-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .memory-overlay{
+
+        width:95%;
+    }
+
+    .modal-avatar{
+
+        width:120px;
+        height:120px;
+    }
+
+    #modalName{
+
+        font-size:24px;
+    }
+
+    #modalMessage{
+
+        font-size:16px;
+    }
+}
+
+/* SECTION 3 */
+
+.memory-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fill,minmax(220px,1fr));
+
+    gap:25px;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding-top:80px; /* xích thư xuống */
+}
+
+.memory-card{
+
+    width:220px;
+    height:260px;
+
+    background:#f8f3ea;
+
+    border:2px solid #d9b26a;
+
+    border-radius:20px;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.memory-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.envelope-top{
+
+    font-size:30px;
+
+    margin-bottom:15px;
+}
+
+.memory-avatar{
+
+    width:50px;
+    height:50px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:3px solid #d9b26a;
+}
+
+.memory-avatar-placeholder{
+
+    width:50px;
+    height:50px;
+
+    border-radius:50%;
+
+    background:#8b0000;
+
+    color:#fff;
+
+    font-size:36px;
+
+    font-weight:700;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+}
+
+.memory-name{
+
+    margin-top:15px;
+
+    color:#8b0000;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    text-align:center;
+}
+
+/* Popup */
+
+.wish-modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.7);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+}
+
+.wish-modal.show{
+
+    display:flex;
+}
+
+.wish-modal-content{
+
+    width:500px;
+
+    max-width:90vw;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    text-align:center;
+
+    position:relative;
+}
+
+.modal-avatar{
+
+    width:120px;
+    height:120px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    margin-bottom:15px;
+}
+
+.modal-avatar-letter{
+
+    width:120px;
+    height:120px;
+
+    border-radius:50%;
+
+    background:#8b0000;
+
+    color:#fff;
+
+    font-size:50px;
+
+    font-weight:700;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    margin:0 auto 15px;
+}
+
+#modalMessage{
+
+    margin-top:20px;
+
+    line-height:1.8;
+}
+
+.close-modal{
+
+    position:absolute;
+
+    top:15px;
+    right:15px;
+
+    border:none;
+
+    background:none;
+
+    font-size:24px;
+
+    cursor:pointer;
+}
+
+/* ===================================
+FOOTER
+=================================== */
+
+.footer{
+    width:100%;
+    margin:0;
+    padding:0;
+    line-height:0;
+}
+
+.footer-image{
+    display:block;
+    width:100vw;
+    max-width:none;
+    height:auto;
+}
+
+/* =========================
+   MEMORY PAGINATION
+========================= */
+
+.memory-pagination{
+
+    margin-top:40px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+}
+
+.page-btn{
+
+    width:50px;
+    height:50px;
+
+    border-radius:50%;
+
+    border:2px solid #d8b05d;
+
+    background:#fff8ef;
+
+    color:#8b0000;
+
+    font-size:32px;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    transition:.3s;
+}
+
+.page-btn:hover{
+
+    background:#8b0000;
+
+    color:#fff;
+}
+
+.page-btn.disabled{
+
+    opacity:.3;
+
+    pointer-events:none;
+}
