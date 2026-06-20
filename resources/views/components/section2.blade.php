@@ -16,79 +16,79 @@
                 enctype="multipart/form-data"
             >
                 @csrf
+                <div class="wish-scale">
+                    <div class="wish-row">
 
-                <div class="wish-row">
+                        <!-- Avatar -->
 
-                    <!-- Avatar -->
+                        <div class="avatar-upload">
 
-                    <div class="avatar-upload">
+                            <input
+                                type="file"
+                                id="avatar"
+                                name="avatar"
+                                accept="image/*"
+                                hidden
+                            >
 
-                        <input
-                            type="file"
-                            id="avatar"
-                            name="avatar"
-                            accept="image/*"
-                            hidden
-                        >
+                            <!-- dùng để lưu ảnh đã crop -->
+                            <input
+                                type="hidden"
+                                id="avatar_cropped"
+                                name="avatar_cropped"
+                            >
 
-                        <!-- dùng để lưu ảnh đã crop -->
-                        <input
-                            type="hidden"
-                            id="avatar_cropped"
-                            name="avatar_cropped"
-                        >
+                            <div
+                                id="avatar-preview"
+                                onclick="document.getElementById('avatar').click()"
+                            >
 
-                        <div
-                            id="avatar-preview"
-                            onclick="document.getElementById('avatar').click()"
-                        >
+                                <span id="avatar-text">
+                                    {{ __('message.upload_photo') }}
+                                </span>
 
-                            <span id="avatar-text">
-                                {{ __('message.upload_photo') }}
-                            </span>
+                            </div>
+
+                        </div>
+
+                        <!-- Right -->
+
+                        <div class="wish-fields">
+
+                            <label class="form-label">
+                                👤 {{ __('message.name') }}
+                            </label>
+
+                            <input
+                                type="text"
+                                name="name"
+                                class="wish-input"
+                                placeholder="{{ __('message.desname') }}"
+                                required
+                            >
+
+                            <label class="form-label">
+                                ❤️ {{ __('message.message') }}
+                            </label>
+
+                            <textarea
+                                name="message"
+                                class="wish-textarea"
+                                placeholder="{{ __('message.desmessage') }}"
+                                required
+                            ></textarea>
+
+                            <button
+                                type="submit"
+                                class="wish-button"
+                            >
+                                ✈ {{ __('message.submit') }}
+                            </button>
 
                         </div>
 
                     </div>
-
-                    <!-- Right -->
-
-                    <div class="wish-fields">
-
-                        <label class="form-label">
-                            👤 {{ __('message.name') }}
-                        </label>
-
-                        <input
-                            type="text"
-                            name="name"
-                            class="wish-input"
-                            placeholder="{{ __('message.desname') }}"
-                            required
-                        >
-
-                        <label class="form-label">
-                            ❤️ {{ __('message.message') }}
-                        </label>
-
-                        <textarea
-                            name="message"
-                            class="wish-textarea"
-                            placeholder="{{ __('message.desmessage') }}"
-                            required
-                        ></textarea>
-
-                        <button
-                            type="submit"
-                            class="wish-button"
-                        >
-                            ✈ {{ __('message.submit') }}
-                        </button>
-
-                    </div>
-
                 </div>
-
             </form>
 
         </div>
