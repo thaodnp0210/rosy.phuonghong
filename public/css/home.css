@@ -514,41 +514,6 @@ SECTION 3
     width:90%;
 }
 
-/* Grid */
-
-.memory-grid{
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(auto-fill,minmax(260px,1fr));
-
-    gap:50px;
-}
-
-/* Card */
-
-.memory-card{
-    width:150px;
-    height:100px;
-
-    border:2px solid #d8b05d;
-    border-radius:18px;
-
-    background:#f8f5ef;
-
-    position:relative;
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-
-    cursor:pointer;
-
-    transition:.3s;
-}
-
 .memory-card:hover{
 
     transform:translateY(-8px);
@@ -1189,4 +1154,154 @@ IPAD
         margin-top:15px;
     }
 
+}
+
+/* ==========================================
+   TABLET + MOBILE FIX
+========================================== */
+
+@media screen and (max-width:1024px){
+
+    /* SECTION 2 */
+
+    .wish-overlay{
+        top:12%;
+        width:92%;
+    }
+
+    .wish-row{
+        flex-direction:column;
+        align-items:center;
+        gap:25px;
+    }
+
+    .avatar-upload{
+        width:180px;
+    }
+
+    #avatar-preview{
+        width:180px;
+        height:180px;
+    }
+
+    .wish-fields{
+        width:100%;
+    }
+
+    .form-label{
+        font-size:22px;
+    }
+
+    .wish-input{
+        width:100%;
+        height:60px;
+        font-size:18px;
+        margin-bottom:20px;
+    }
+
+    .wish-textarea{
+        width:100%;
+        height:150px;
+        font-size:18px;
+    }
+
+    .wish-button{
+        margin-top:20px;
+    }
+
+    /* SECTION 3 */
+
+    .memory-overlay{
+        top:15%;
+        width:95%;
+    }
+
+    .memory-grid{
+
+        grid-template-columns:
+            repeat(2,minmax(140px,1fr));
+
+        gap:20px;
+
+        justify-items:center;
+
+        padding-top:40px;
+    }
+
+    .memory-card{
+
+        width:150px;
+        height:210px;
+    }
+
+    .memory-avatar,
+    .memory-avatar-placeholder{
+
+        width:50px;
+        height:50px;
+    }
+
+    .memory-name{
+        font-size:18px;
+    }
+
+    /* POPUP */
+
+    .wish-modal-content{
+
+        width:90vw;
+        max-width:700px;
+
+        max-height:80vh;
+
+        overflow-y:auto;
+    }
+
+    .modal-avatar,
+    .modal-avatar-letter{
+
+        width:80px;
+        height:80px;
+    }
+
+    #modalName{
+        font-size:24px;
+    }
+
+    #modalMessage{
+        font-size:18px;
+        text-align:left;
+    }
+}
+
+
+/* MOBILE */
+
+@media screen and (max-width:768px){
+
+    .wish-overlay{
+        top:8%;
+    }
+
+    .memory-grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+        gap:15px;
+    }
+
+    .memory-card{
+
+        width:140px;
+        height:190px;
+    }
+
+    .memory-name{
+        font-size:16px;
+    }
+
+    .footer-image{
+        width:100%;
+    }
 }
