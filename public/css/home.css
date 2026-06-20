@@ -1026,139 +1026,8 @@ FOOTER
 }
 
 /* ===================================
-IPAD
+RESPONSIVE
 =================================== */
-
-@media screen and (max-width: 1200px){
-
-    .wish-overlay{
-
-        top:22%;
-        width:92%;
-    }
-
-    .wish-row{
-
-        gap:30px;
-    }
-
-    .avatar-upload{
-
-        width:180px;
-    }
-
-    #avatar-preview{
-
-        width:180px;
-        height:180px;
-    }
-
-    .form-label{
-
-        font-size:24px;
-    }
-
-    .wish-input{
-
-        height:65px;
-        font-size:20px;
-    }
-
-    .wish-textarea{
-
-        height:180px;
-        font-size:18px;
-    }
-
-    .wish-button{
-
-        width:240px;
-        height:60px;
-        font-size:18px;
-    }
-
-}
-
-@media screen and (max-width: 768px){
-
-    .wish-overlay{
-
-        top:10%;
-        width:94%;
-    }
-
-    .wish-row{
-
-        flex-direction:column;
-
-        align-items:center;
-
-        gap:20px;
-    }
-
-    .avatar-upload{
-
-        width:130px;
-    }
-
-    #avatar-preview{
-
-        width:130px;
-        height:130px;
-    }
-
-    .wish-fields{
-
-        width:100%;
-    }
-
-    .form-label{
-
-        font-size:18px;
-
-        margin-bottom:8px;
-    }
-
-    .wish-input{
-
-        width:100%;
-
-        height:48px;
-
-        border-radius:18px;
-
-        font-size:15px;
-
-        margin-bottom:15px;
-    }
-
-    .wish-textarea{
-
-        width:100%;
-
-        height:110px;
-
-        border-radius:18px;
-
-        font-size:15px;
-    }
-
-    .wish-button{
-
-        width:180px;
-
-        height:48px;
-
-        font-size:16px;
-
-        margin-top:15px;
-    }
-
-}
-
-/* ==========================================
-   RESPONSIVE FIX
-========================================== */
 
 @media screen and (max-width:1024px){
 
@@ -1193,50 +1062,60 @@ IPAD
     }
 
     .wish-input{
+        width:100%;
         height:60px;
         font-size:18px;
     }
 
     .wish-textarea{
-        height:160px;
+        width:100%;
+        height:180px;
         font-size:18px;
+    }
+
+    .wish-button{
+        width:220px;
+        height:60px;
     }
 
     /* SECTION 3 */
 
     .memory-overlay{
-        top:22%;
         width:95%;
+        top:18%;
     }
 
     .memory-grid{
-        grid-template-columns:
-        repeat(2,1fr);
-
-        padding-top:30px;
+        grid-template-columns:repeat(3,1fr);
+        gap:18px;
+        padding-top:40px;
     }
 
     .memory-card{
-        width:160px;
+        width:100%;
+        max-width:180px;
         height:220px;
-    }
-
-    .memory-avatar,
-    .memory-avatar-placeholder{
-        width:55px;
-        height:55px;
-    }
-
-    .memory-name{
-        font-size:18px;
+        margin:auto;
     }
 }
 
 @media screen and (max-width:768px){
 
+    /* SECTION 2 */
+
     .wish-overlay{
-        top:15%;
+        top:8%;
         width:92%;
+    }
+
+    .wish-row{
+        flex-direction:column;
+        align-items:center;
+        gap:20px;
+    }
+
+    .avatar-upload{
+        width:140px;
     }
 
     #avatar-preview{
@@ -1244,36 +1123,89 @@ IPAD
         height:140px;
     }
 
+    .wish-fields{
+        width:100%;
+    }
+
     .form-label{
         font-size:18px;
+        margin-bottom:10px;
     }
 
     .wish-input{
-        height:50px;
+        width:100%;
+        height:52px;
+        border-radius:18px;
         font-size:15px;
+        margin-bottom:15px;
     }
 
     .wish-textarea{
+        width:100%;
         height:120px;
+        border-radius:18px;
         font-size:15px;
     }
 
     .wish-button{
         width:180px;
         height:50px;
+        font-size:16px;
+        margin-top:15px;
     }
 
+    /* SECTION 3 */
+
     .memory-overlay{
-        top:18%;
+        top:15%;
+        width:95%;
+    }
+
+    .memory-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:15px;
+        padding-top:20px;
     }
 
     .memory-card{
-        width:130px;
-        height:180px;
+        width:100%;
+        max-width:150px;
+        height:190px;
+        margin:auto;
+    }
+
+    .memory-avatar,
+    .memory-avatar-placeholder{
+        width:50px;
+        height:50px;
     }
 
     .memory-name{
         font-size:15px;
+    }
+
+    /* POPUP */
+
+    .wish-modal-content{
+        width:95vw;
+        padding:20px;
+    }
+
+    .modal-avatar,
+    .modal-avatar-letter,
+    .modal-initial{
+        width:80px;
+        height:80px;
+        font-size:32px;
+    }
+
+    #modalName{
+        font-size:22px;
+    }
+
+    #modalMessage{
+        font-size:16px;
+        line-height:1.6;
     }
 
     .footer-image{
